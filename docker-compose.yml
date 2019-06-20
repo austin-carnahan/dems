@@ -1,12 +1,13 @@
 version: "3"
-
 services:
-	etl:
-		build: "./etl"
-		ports:
-			- "5007:50007"
-		links:
-			- my_db
-	my_db:
-		build: "./db"
-		# image: mongo:3.6.4
+
+  etl:
+    build: "./etl"
+    ports:
+      - "5007:5007"
+    links:
+      - my_db
+  
+  my_db:
+    build: "./db"
+    # image: mongo:3.6.4
